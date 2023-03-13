@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@id/searchLocationBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".ui.MapActivity" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxEnableLocations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:drawableTint="@color/base_orange"
+            android:buttonTint="@color/base_orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/standard"
+            app:layout_constraintTop_toTopOf="@id/searchLayer"
+            app:layout_constraintBottom_toBottomOf="@+id/searchLayer"
+            android:layout_marginHorizontal="@dimen/standard"
+            />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchLayer"
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/large"
+            android:layout_marginTop="@dimen/standard"
+            android:background="@drawable/bg_search"
+            android:paddingHorizontal="@dimen/standard"
+            app:layout_constraintEnd_toStartOf="@+id/checkBoxEnableLocations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/editTextSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/standard"
+                android:gravity="center_vertical|start"
+                android:text="@string/search"
+                android:padding="@dimen/standard"
+                android:textSize="13dp"
+                android:textColor="@color/gray_01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/searchLocationBtn"
+            style="@style/buttonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/large"
+            android:layout_marginBottom="@dimen/standard"
+            android:text="Please Enter Your Destination"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/currentLoc"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="@dimen/large"
+            android:layout_marginBottom="@dimen/large"
+            android:background="@drawable/bg_oval_btn"
+            android:padding="14dp"
+            android:src="@drawable/my_location"
+            app:layout_constraintBottom_toTopOf="@id/searchLocationBtn"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/directionImg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginEnd="@dimen/large"
+            android:layout_marginBottom="@dimen/large"
+            android:background="@drawable/bg_oval_btn"
+            android:padding="14dp"
+            android:src="@drawable/ic_directions"
+            app:layout_constraintBottom_toTopOf="@id/currentLoc"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/listLocation"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="@dimen/large"
+            android:layout_marginBottom="@dimen/large"
+            android:background="@drawable/bg_oval_btn"
+            android:padding="14dp"
+            android:src="@drawable/list_location"
+            app:layout_constraintBottom_toTopOf="@id/searchLocationBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

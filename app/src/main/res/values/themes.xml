@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HlooMap" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#DFA136</item>
+        <item name="colorPrimaryVariant">@color/strok_bluDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">@dimen/standard</item>
+        <item name="android:layout_marginRight">@dimen/standard</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="textViewLightStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/base_bluDark</item>
+        <item name="fontFamily">@font/yekan_bakh_regular</item>
+    </style>
+    <!-- textInputLayout-->
+    <!--    <style name="CustomFillBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+    <style name="CustomOutBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/base_bluDark</item>
+        <item name="boxStrokeColor">@color/strok_bluDark</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="startIconTint">@color/base_bluDark</item>
+        <item name="boxBackgroundMode">outline</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@android:color/transparent</item>
+        <item name="round">34dp</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetModalStyle</item>
+    </style>
+
+    <style name="BottomSheetModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottomsheet</item>
+    </style>
+
+
+    <style name="textView_style">
+        <item name="android:textColor">@color/base_bluDark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/standard"
+        android:background="@drawable/bg_bottomsheet">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your Coordinate"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/standard"
+        android:layout_marginTop="@dimen/large"
+        android:textColor="@color/base_bluDark"
+        android:fontFamily="sans-serif"
+        android:layout_marginHorizontal="@dimen/standard"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lat_editText_lay"
+        style="@style/CustomOutBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large"
+        android:hint="@string/latitude"
+        android:layout_marginHorizontal="@dimen/standard"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:startIconDrawable="@drawable/edit_location">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lat_editText"
+            style="@style/textViewLightStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/long_editText_lay"
+        style="@style/CustomOutBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard"
+        android:layout_marginHorizontal="@dimen/standard"
+        android:hint="@string/longitude"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lat_editText_lay"
+        app:startIconDrawable="@drawable/edit_location"
+        >
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/long_editText"
+            style="@style/textViewLightStyle"
+            android:layout_width="match_parent"
+            android:inputType="numberDecimal"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/locationName"
+            style="@style/CustomOutBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:layout_marginHorizontal="@dimen/standard"
+            android:hint="@string/title"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/long_editText_lay"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/locationName_editText"
+                style="@style/textViewLightStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/locationDes"
+            style="@style/CustomOutBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:gravity="start"
+            app:hintAnimationEnabled="true"
+            android:layout_marginHorizontal="@dimen/standard"
+            android:hint="@string/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationName"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/locationDes_editText"
+                style="@style/textViewLightStyle"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:maxLines="3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkboxSaveLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:text="@string/save"
+            android:textColor="@color/base_bluDark"
+            android:drawableTint="@color/base_bluDark"
+            android:buttonTint="@color/base_bluDark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationDes"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginHorizontal="@dimen/standard"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/searchLoc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="@dimen/standard"
+        android:backgroundTint="@color/base_bluDark"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="@dimen/small"
+        android:layout_marginTop="@dimen/large"
+        android:layout_marginVertical="@dimen/standard"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxSaveLocation" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

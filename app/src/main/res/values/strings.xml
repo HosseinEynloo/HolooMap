@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">hlooMap</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+    <string name="current_loca_txt">Me</string>
+    <string name="search">search</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="IamHere">I am here</string>
+    <string name="MyDestination">My Destination</string>
+    <string name="EnableGpsMessage">Please Enable Your GPS or check Permission!</string>
+    <string name="list_title">موقعیت های ثبت شده</string>
+    <string name="save">save</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="direction_message">به دلیل محدودبت هایی که گوگل اعمال کرده در پروژه های جدید امکان مسیریابی بدون داشتن حساب بانکی (کردیت کارت معتبر) میسر نمی باشد!!</string>
+</resources>
